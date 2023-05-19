@@ -1,5 +1,5 @@
 def Agent = null
-node ('Built-In Node'){
+node ('master'){
 stage('CheckoutSCM and set Node'){
 checkout scm 
 if (env.BRANCH_NAME == 'master') {

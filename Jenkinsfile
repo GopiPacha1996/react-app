@@ -3,13 +3,13 @@ node ('master'){
 stage('CheckoutSCM and set Node'){
 checkout scm 
 if (env.BRANCH_NAME == 'master') {
-Agent = 'console'
+Agent = 'prod'
 }
 if (env.BRANCH_NAME == 'develop'){
-Agent = 'datanow'
+Agent = 'dev'
 }
 else (env.BRANCH_NAME = 'qa'){
-Agent = 'qa-lightsail'
+Agent = 'dev'
 }
 }
 

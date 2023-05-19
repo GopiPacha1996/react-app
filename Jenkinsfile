@@ -19,12 +19,9 @@ agent{
 label  Agent
 }
 stages{
-stage ('scm'){
-checkout scm
-
-}
 stage ('build'){
 steps {
+checkout scm
 sh 'sudo docker build -t react:${env.BRANCH_NAME} .'
 sh 'sudo docker images'
 }

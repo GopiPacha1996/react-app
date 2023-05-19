@@ -12,6 +12,7 @@ else (env.BRANCH_NAME = 'qa'){
 Agent = 'dev'
 }
 }
+}
 
 pipeline {
 agent{

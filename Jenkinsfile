@@ -39,7 +39,7 @@ sh 'sudodocker ps -a'
 stage('clean'){
 steps{
 sh 'sudo docker rm -f multi-doc'
-sh 'sudo docker rmi react:${env.BRANCH_NAME}
+sh 'sudo docker rmi react:${env.BRANCH_NAME}'
 }
 }
 

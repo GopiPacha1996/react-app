@@ -2,6 +2,7 @@ def Agent = null
 node ('master'){
 stage('CheckoutSCM and set Node'){
 checkout scm 
+  echo ${BRANCH_NAME}
 if (env.BRANCH_NAME == 'master') {
 Agent = 'prod'
 }

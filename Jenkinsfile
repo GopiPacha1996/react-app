@@ -16,8 +16,9 @@ Agent = 'dev'
 
 pipeline {
 agent{
-lable  Agent
+label  Agent
 }
+stages{
 stage ('scm'){
 checkout scm
 
@@ -43,5 +44,5 @@ sh 'sudo docker rm -f multi-doc'
 sh 'sudo docker rmi react:${env.BRANCH_NAME}'
 }
 }
-
+}
 }

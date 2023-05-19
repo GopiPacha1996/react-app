@@ -16,12 +16,11 @@ Agent = 'dev'
 
 pipeline {
 agent{
-label  Agent
+label  $Agent
 }
 stages{
 stage ('build'){
 steps {
-checkout scm
 sh 'sudo docker build -t react:${env.BRANCH_NAME} .'
 sh 'sudo docker images'
 }
